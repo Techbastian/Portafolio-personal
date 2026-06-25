@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-gold-50: #fefdf0;
+  --color-gold-100: #fdfae1;
+  --color-gold-200: #f9f2b8;
+  --color-gold-300: #f2e381;
+  --color-gold-400: #e8cd4e;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #b58c28;
+  --color-gold-700: #91691f;
+  --color-gold-800: #74511d;
+  --color-gold-900: #60421c;
+  --color-gold-950: #37220c;
+  
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+}
+
+@layer utilities {
+  /* Hide scrollbars but keep functionality */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom background vignette to match reference */
+.vignette-bg {
+  background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.07) 0%, rgba(7, 7, 8, 0.98) 70%);
+}
+
+.glow-card {
+  transition: all 0.4s ease;
+}
+
+.glow-card:hover {
+  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
